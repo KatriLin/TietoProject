@@ -1,0 +1,107 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
+import { Pagination,EffectFade, Autoplay } from "swiper/modules";
+import 'swiper/css/effect-fade';
+import "swiper/css/pagination";
+import star from "../img/star.webp";
+import clouds from "../img/clouds.webp";
+import frontpage from "../img/frontpage.jpg";
+import frontBackgroud from "../img/giu-vicente-unsplash.jpg";
+import frontBackgroud2 from "../img/christin-hume-unsplash.jpg";
+import frontBackgroud3 from "../img/marvin-meyer-unsplash.jpg";
+import "swiper/css";
+
+const slidesContent = [
+  {
+    id: 1,
+    header: "Asiakaslähtöinen ohjelmistokehittäjä",
+    text: "Olen Katri Lindvall, juniori-ohjelmistokehittäjä ja etsin parhaillaan kokoaikaista työtä ohjelmistokehityksen parista. Osaamiseni painottuu erityisesti frontend-kehitykseen, mutta haluaisin tulevaisuudessa laajentaa osaamistani myös Full Stack -rooliin.",
+    backgroundImage: frontpage,
+    item3BackgroundImage: star,
+    link: "/about",
+  },
+  {
+    id: 2,
+    header: "Miksi teille?",
+    text: "Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Slide 2 content.",
+    backgroundImage: frontBackgroud,
+    item3BackgroundImage: clouds,
+    link: "/about",
+  },
+  {
+    id: 3,
+    header: "Mitä olen tehnyt aikaisemmin?",
+    text: "Aikaisemmassa työssäni Stealth Black Oy:ssä työskentelin ohjelmistokehittäjänä muutaman vuoden, rakentaen datankeräysohjelmia Pythonilla ja Seleniumilla. Frontend-kehityksessä käytin Reactia yrityksen tuotteiden ja verkkosivujen kehittämisessä, ja tietokantana käytössäni oli PostgreSQL. Lisäksi tuotin opetusaineistoja koneoppimismalleille. Ennen tätä työskentelin RND Worksillä, jossa kehitimme tiimissä asiakkaalle mobiilisovelluksen React Nativea käyttäen.",
+    backgroundImage: frontBackgroud2,
+    item3BackgroundImage: star,
+    link: "/workexperience",
+  },
+  {
+    id: 4,
+    header: "Mitä voin tarjota?",
+    text: "Minulla on monipuolista työkokemusta ohjelmistokehittäjänä sekä muissa rooleissa eri toimialoilta, mikä on vahvistanut ongelmanratkaisutaitojani ja sopeutumiskykyäni. Erityisesti frontend-kehityksessä olen tarkka yksityiskohdista ja nautin visuaalisen ilmeen rakentamisesta. Koen, että voin tuoda tiimille lisäarvoa positiivisella asenteellani ja asiakaspalvelutaidoillani. Kansainvälinen kokemukseni opiskelun ja työn kautta on kehittänyt vuorovaikutustaitojani eri kulttuurien kanssa, ja puhun sujuvasti suomea, englantia ja italiaa. Luonteeltani olen oma-aloitteinen, joustava ja sosiaalinen.",
+    backgroundImage: frontBackgroud3,
+    item3BackgroundImage: star,
+    link: "/workexperience",
+  },
+];
+const Home = () => {
+ 
+
+  return (
+    <>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        effect={'fade'}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        
+        modules={[Autoplay, Pagination,EffectFade]}
+        className="mySwiper"
+      >
+        {slidesContent.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div
+              className="slider-container"
+              style={{
+                backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${slide.backgroundImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                position: "relative",
+              }}
+            >
+              <div className="slider1 item1">
+                <h1>{slide.header}</h1>
+              </div>
+              <div className="text item2">
+                <p className="slide-text">{slide.text}</p>
+                <Link className="navlinks" to={slide.link}>
+                  <div className="morelink">Lue lisää</div>
+                </Link>
+              </div>
+
+              <div
+                className="item3"
+                style={{
+                  backgroundImage: `url(${slide.item3BackgroundImage})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+  );
+};
+
+export default Home;
