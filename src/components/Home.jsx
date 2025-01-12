@@ -5,6 +5,7 @@ import 'swiper/css/effect-fade';
 import "swiper/css/pagination";
 import star from "../img/star.webp";
 import clouds from "../img/clouds.webp";
+import ball from "../img/rain.png";
 import frontpage from "../img/frontpage.jpg";
 import frontBackgroud from "../img/giu-vicente-unsplash.jpg";
 import frontBackgroud2 from "../img/christin-hume-unsplash.jpg";
@@ -33,7 +34,7 @@ const slidesContent = [
     header: "Mitä olen tehnyt aikaisemmin?",
     text: "Aikaisemmassa työssäni Stealth Black Oy:ssä työskentelin ohjelmistokehittäjänä muutaman vuoden, rakentaen datankeräysohjelmia Pythonilla ja Seleniumilla. Frontend-kehityksessä käytin Reactia yrityksen tuotteiden ja verkkosivujen kehittämisessä, ja tietokantana käytössäni oli PostgreSQL. Lisäksi tuotin opetusaineistoja koneoppimismalleille. Ennen tätä työskentelin RND Worksillä, jossa kehitimme tiimissä asiakkaalle mobiilisovelluksen React Nativea käyttäen.",
     backgroundImage: frontBackgroud2,
-    item3BackgroundImage: star,
+    item3BackgroundImage: ball,
     link: "/workexperience",
   },
   {

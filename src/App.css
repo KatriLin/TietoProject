@@ -268,8 +268,8 @@ h1 {
   display: flex; 
   flex-wrap: wrap; 
   justify-content: center; 
-  align-items: center; 
   padding: 100px 40px;
+  align-items: stretch;
 }
 
 .work-item {
@@ -418,5 +418,201 @@ h1 {
 
 .footer {
   background-color: #280071;
-  height: 500px;
+  height: 300px;
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 30px;
+    line-height: 64px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+  }
+  .slider-container {
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    grid-template-rows: 200px 200px 200px; 
+    height: 100vh;
+  
+
+  }
+ 
+  .item1 {
+    grid-column: 1 / span 6;
+      grid-row: 5;
+      background-color: #280071;
+      color: #ffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    
+   
+  }
+  .item2 {
+    grid-column: 1 / span 6;
+      grid-row: 6;
+      display: flex;
+      justify-content: flex-start;
+     padding: 30px;
+    
+  }
+  .item3 {
+    grid-column: 1;
+    grid-row: 4;
+    width: 200px;
+    height: 200px;
+    margin:0;
+    justify-self: start; 
+    align-self: end;
+    
+  }
+ .morelinks {
+  align-self: flex-start;
+ }
+ /* about page */
+ .about-boxes-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 20px;
+}
+  /*work page */
+  .work-heading {
+    font-size: 4rem;
+   padding-left: 50px;
+   
+  }
+  /*education page */
+  .eduboxes-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+/*mobilephone */
+@media (min-width: 250px) and (max-width: 768px) {
+  .slider-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100vh;
+ 
+
+  }
+  h1 {
+    font-size: 30px;
+      line-height: 34px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+    }
+  
+ 
+  .item1 {
+    grid-column: 1 / span 6;
+      grid-row: 5;
+      background-color: #280071;
+      color: #ffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    
+   
+  }
+  .item2 {
+    grid-column: 1 / span 6;
+      grid-row: 6;
+      display: flex;
+      justify-content: flex-start;
+     padding: 30px;
+    
+  }
+  .item3 {
+    grid-column: 1;
+    grid-row: 4;
+    width: 100px;
+    height: 100px;
+    margin:0;
+    justify-self: start; 
+    align-self: end;
+    
+  }
+  /* about page */
+  .about-container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .about-text {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+   
+  }
+  .about-text-2 {
+    font-size: 14px;
+    line-height: 18px;
+   
+  }
+  .about-boxes-container {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  /*work experience */
+  .work-container {
+    padding:20px;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+      "work-item1"
+      "work-item2"
+      "work-item4"
+      "work-item3"
+      "work-item5"
+      "work-item6";
+  }
+  .work-heading {
+    font-size: 2rem;
+    line-height: 2.10rem;
+    margin:30px;
+  }
+  .work-item {
+    width: 100%;
+    min-height: 200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .work-item1 {
+    grid-area: work-item1;
+  }
+  .work-item2 {
+    grid-area: work-item2;
+  }
+  .work-item3 {
+    grid-area: work-item3;
+  }
+  .work-item4 {
+    grid-area: work-item4;
+  }
+  .work-item5 {
+    grid-area: work-item5;
+  }
+  .work-item6 {
+    grid-area: work-item6;
+  }
+  .work-item2,
+  .work-item3,
+  .work-item6 {
+    margin-bottom: 20px; 
+  }
+  
+
+  /* education page */
+  .eduboxes-container {
+    
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
