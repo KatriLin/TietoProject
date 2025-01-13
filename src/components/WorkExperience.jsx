@@ -68,7 +68,9 @@ const WorkExperience = () => {
           style={{ backgroundImage: `url(${backgroungWorkItem5})` }}
         ></div>
         <div className="work-item work-item6">
-          <h3 className="work-secondary-heading">Junior Software Developer Trainee</h3>
+          <h3 className="work-secondary-heading">
+            Junior Software Developer Trainee
+          </h3>
           <p className="work-text">
             Ohjelmoin tarjoilijoiden tilausjärjestelmän hyödyntäen JavaScriptiä,
             PostgreSQL:ää ja Javaa.

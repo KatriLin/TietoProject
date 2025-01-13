@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import { Pagination,EffectFade, Autoplay } from "swiper/modules";
-import 'swiper/css/effect-fade';
+import { Pagination, EffectFade, Autoplay } from "swiper/modules";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import star from "../img/star.webp";
 import clouds from "../img/clouds.webp";
@@ -47,14 +47,12 @@ const slidesContent = [
   },
 ];
 const Home = () => {
- 
-
   return (
     <>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        effect={'fade'}
+        effect={"fade"}
         pagination={{
           clickable: true,
         }}
@@ -62,8 +60,7 @@ const Home = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        
-        modules={[Autoplay, Pagination,EffectFade]}
+        modules={[Autoplay, Pagination, EffectFade]}
         className="mySwiper"
       >
         {slidesContent.map((slide) => (
@@ -101,6 +98,7 @@ const Home = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="home-section"></div>
     </>
   );
 };

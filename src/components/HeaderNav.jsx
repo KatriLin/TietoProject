@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
-import { Link,useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const HeaderNav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === '/';
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
-    
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
-   
-    }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -57,9 +55,9 @@ const HeaderNav = () => {
             </Link>
           </li>
         </ul>
-          {/* Hamburger-menu */}
-          <div
-         className={`hamburger ${isHome ? 'home' : ''} ${menuOpen ? 'active' : ''}`}
+        {/* Hamburger-menu */}
+        <div
+          className={`hamburger ${isHome ? "home" : ""} ${menuOpen ? "active" : ""}`}
           onClick={toggleMenu}
         >
           <div className="line1"></div>
@@ -67,16 +65,12 @@ const HeaderNav = () => {
           <div className="line3"></div>
         </div>
       </nav>
-       {/* Hamburger-menu */}
-       {menuOpen && (
-        <div className={`dropdown-menu ${isHome ? 'home' : 'other'}`}>
+      {/* Hamburger-menu */}
+      {menuOpen && (
+        <div className={`dropdown-menu ${isHome ? "home" : "other"}`}>
           <ul className="overlay-menu">
             <li>
-              <Link
-                className="hamburgerlinks"
-                to="/"
-                onClick={toggleMenu}
-              >
+              <Link className="hamburgerlinks" to="/" onClick={toggleMenu}>
                 Etusivu
               </Link>
             </li>
@@ -90,11 +84,7 @@ const HeaderNav = () => {
               </Link>
             </li>
             <li>
-              <Link
-                className="hamburgerlinks"
-                to="/about"
-                onClick={toggleMenu}
-              >
+              <Link className="hamburgerlinks" to="/about" onClick={toggleMenu}>
                 Minusta
               </Link>
             </li>
@@ -107,11 +97,9 @@ const HeaderNav = () => {
                 Koulutus
               </Link>
             </li>
-
           </ul>
         </div>
-        )}
-      
+      )}
     </div>
   );
 };

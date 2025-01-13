@@ -25,8 +25,8 @@ body {
   height: 40px;
   width: 100%;
   transition:
-  background-color 0.3s ease,
-  color 0.3s ease;
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 .nav.scrolled {
   background-color: white;
@@ -102,7 +102,7 @@ h1 {
   padding-right: 20px;
 }
 .morelink {
-  margin-top:20px;
+  margin-top: 20px;
   background-color: #eacbbb;
   font-size: 16px;
   line-height: 21px;
@@ -117,14 +117,13 @@ h1 {
 .item3 {
   grid-column: 4 / 5;
   grid-row: 3;
-
 }
-.mySwiper {
-  margin-bottom: 200px;
+.home-section {
+  height: 200px;
+  background-color: #efefef;
 }
 .hamburger {
   display: none;
-  
 }
 .hamburgerlinks {
   text-decoration: none;
@@ -144,7 +143,6 @@ h1 {
   height: 3px;
   transition: 0.5s ease;
   margin: 4px 0;
-
 }
 
 .hamburger.active .line1 {
@@ -177,14 +175,11 @@ h1 {
   z-index: 999;
 }
 
-
 .overlay-menu li {
   margin: 1rem 0;
   display: flex;
   justify-content: center;
 }
-
-
 
 /*about page */
 .about-wrapper {
@@ -310,7 +305,6 @@ h1 {
   font-size: 4.75rem;
   line-height: 5rem;
   color: #fff;
-  
 }
 .background-work {
   background-position: center;
@@ -323,18 +317,18 @@ h1 {
   position: relative;
 }
 .work-container {
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 100px 40px;
   align-items: stretch;
 }
 
 .work-item {
-  width: 45%; 
+  width: 45%;
   min-height: 300px;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   padding-right: 15px;
   padding-left: 15px;
   font-size: 16px;
@@ -354,17 +348,17 @@ h1 {
   background-position: center;
 }
 .work-secondary-heading {
-  margin:30px;
+  margin: 30px;
 }
 .work-text {
-  margin:30px;
+  margin: 30px;
 }
 .worklinks {
   font-size: 16px;
   line-height: 21px;
   height: 40px;
   display: flex;
-  margin:30px;
+  margin: 30px;
 }
 .worklinks a {
   min-width: 100px;
@@ -477,6 +471,83 @@ h1 {
 .footer {
   background-color: #280071;
   height: 300px;
+  padding-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 40px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.footer-divider {
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+}
+.footername {
+  color: #fff;
+  font-size: 40px;
+  margin-top: 0;
+}
+.footername-wrapper {
+  flex: 2;
+}
+.links-section {
+  flex: 1;
+}
+.links-section ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.links-section li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.links-section a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.links-section a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  gap: 15px;
+  flex: 2;
+}
+
+.icon {
+  padding: 10px;
+}
+
+.social-icons a.linkedin-icon,
+a.email-icon,
+a.github-icon,
+a.phone-icon {
+  color: white;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copyright {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: #b1b5ce;
+  padding-top: 15px;
 }
 
 /* tablet */
@@ -489,79 +560,74 @@ h1 {
   }
   .slider-container {
     display: grid;
-    grid-template-columns: 200px 1fr; 
-    grid-template-rows: 200px 200px 200px; 
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 200px 200px 200px;
     height: 100vh;
-  
-
   }
- .nav {
-  justify-content: space-around;
-  margin-top:10px;
- }
+  .nav {
+    justify-content: space-around;
+    margin-top: 10px;
+  }
 
   .item1 {
     grid-column: 1 / span 6;
-      grid-row: 5;
-      background-color: #280071;
-      color: #ffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    
-   
+    grid-row: 5;
+    background-color: #280071;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .item2 {
     grid-column: 1 / span 6;
-      grid-row: 6;
-      display: flex;
-      justify-content: flex-start;
-     padding: 30px;
-    
+    grid-row: 6;
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
   }
   .item3 {
     grid-column: 1;
     grid-row: 4;
     width: 200px;
     height: 200px;
-    margin:0;
-    justify-self: start; 
+    margin: 0;
+    justify-self: start;
     align-self: end;
-    
   }
- .morelinks {
-  align-self: flex-start;
- }
- .hamburger {
-  display: block;
-  cursor: pointer;
-  
-}
-.hamburgerlinks {
-  font-size: 2rem;
-}
-.navlinks {
-  display:none;
-}
- /* about page */
- .about-boxes-container {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0 20px;
-}
+  .morelinks {
+    align-self: flex-start;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburgerlinks {
+    font-size: 2rem;
+  }
+
+  .navlinks {
+    display: none;
+  }
+  /* about page */
+  .about-boxes-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
   /*work page */
   .work-heading {
     font-size: 4rem;
-   padding-left: 50px;
-   
+    padding-left: 50px;
   }
   /*education page */
   .eduboxes-container {
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     padding: 0 20px;
+  }
+  .footername {
+    font-size: 30px;
   }
 }
 /*mobilephone */
@@ -570,59 +636,50 @@ h1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     height: 100vh;
- 
-
   }
   .navlinks {
-    display:none;
+    display: none;
   }
   .nav {
     justify-content: space-around;
-    margin-top:10px;
-   
-   }
- 
+    margin-top: 10px;
+  }
+
   h1 {
     font-size: 30px;
-      line-height: 34px;
-      font-family: "Roboto", sans-serif;
-      font-weight: 100;
-    }
-  
-    .hamburger {
-      display: block;
-      cursor: pointer;
-      
-    }
+    line-height: 34px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
   .item1 {
     grid-column: 1 / span 6;
-      grid-row: 5;
-      background-color: #280071;
-      color: #ffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    
-   
+    grid-row: 5;
+    background-color: #280071;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .item2 {
     grid-column: 1 / span 6;
-      grid-row: 6;
-      display: flex;
-      justify-content: flex-start;
-     padding: 30px;
-    
+    grid-row: 6;
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
   }
   .item3 {
     grid-column: 1;
     grid-row: 4;
     width: 100px;
     height: 100px;
-    margin:0;
-    justify-self: start; 
+    margin: 0;
+    justify-self: start;
     align-self: end;
-    
   }
   /* about page */
   .about-container {
@@ -632,12 +689,10 @@ h1 {
   .about-text {
     font-size: 2.5rem;
     line-height: 2.5rem;
-   
   }
   .about-text-2 {
     font-size: 14px;
     line-height: 18px;
-   
   }
   .about-boxes-container {
     grid-template-columns: repeat(1, 1fr);
@@ -647,10 +702,10 @@ h1 {
   }
   /*work experience */
   .work-container {
-    padding:20px;
+    padding: 20px;
     display: grid;
-    grid-template-columns: 1fr; 
-    grid-template-areas: 
+    grid-template-columns: 1fr;
+    grid-template-areas:
       "work-item1"
       "work-item2"
       "work-item4"
@@ -660,8 +715,8 @@ h1 {
   }
   .work-heading {
     font-size: 2rem;
-    line-height: 2.10rem;
-    margin:30px;
+    line-height: 2.1rem;
+    margin: 30px;
   }
   .work-item {
     width: 100%;
@@ -690,15 +745,22 @@ h1 {
   .work-item2,
   .work-item3,
   .work-item6 {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
-  
 
   /* education page */
   .eduboxes-container {
-    
     grid-template-columns: repeat(1, 1fr);
     max-width: 100%;
     padding: 0 20px;
+  }
+  .footername {
+    font-size: 20px;
+  }
+  .footer-container {
+    display: block;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }

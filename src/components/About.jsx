@@ -1,11 +1,13 @@
 import aboutBackgroudTieto from "../img/tietoevryback.jpg";
-import kuva from '../img/kuva.png'
-import computer from '../img/frontpage.jpg'
-import katri from '../img/katri.jpeg'
+import kuva from "../img/kuva.png";
+import computer from "../img/frontpage.jpg";
+import katri from "../img/katri.jpeg";
 const About = () => {
   return (
     <div className="about-wrapper">
-      <div className="background-about"  style={{
+      <div
+        className="background-about"
+        style={{
           backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${aboutBackgroudTieto})`,
         }}
       >
@@ -22,10 +24,12 @@ const About = () => {
       <div className="about-boxes-container">
         <h2 className="about-heading-secondary">Tietoa minusta</h2>
         <div className="about-me-box">
-          <div className="image-container-about1"  style={{
-          backgroundImage: `url(${kuva})`,
-        }}
-      ></div>
+          <div
+            className="image-container-about1"
+            style={{
+              backgroundImage: `url(${kuva})`,
+            }}
+          ></div>
           <div className="description">
             <h3>Aina oppimassa uutta</h3>
             <p className="description-text">
@@ -41,10 +45,12 @@ const About = () => {
         </div>
 
         <div className="about-me-box">
-          <div className="image-container-about2" style={{
-          backgroundImage: `url(${computer})`,
-        }}
-      ></div>
+          <div
+            className="image-container-about2"
+            style={{
+              backgroundImage: `url(${computer})`,
+            }}
+          ></div>
           <div className="description">
             <h3>Positiivinen ja visuaalinen</h3>
             <p className="description-text">
@@ -57,10 +63,12 @@ const About = () => {
         </div>
 
         <div className="about-me-box">
-          <div className="image-container-about3" style={{
-          backgroundImage: `url(${katri})`,
-        }}
-      ></div>
+          <div
+            className="image-container-about3"
+            style={{
+              backgroundImage: `url(${katri})`,
+            }}
+          ></div>
           <div className="description">
             <h3>Sosiaalinen ja yhteystyökykyinen</h3>
             <p className="description-text">
