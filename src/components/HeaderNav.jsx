@@ -25,7 +25,7 @@ const HeaderNav = () => {
 
   return (
     <div>
-      <nav className={`nav ${isScrolled ? "scrolled" : ""}`}>
+      <nav className={`nav ${isScrolled ? "scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}>
         <div>
           <img
             src="https://upload.wikimedia.org/wikipedia/de/thumb/f/f8/Tietoevry_logo.svg/2560px-Tietoevry_logo.svg.png"
@@ -67,7 +67,7 @@ const HeaderNav = () => {
       </nav>
       {/* Hamburger-menu */}
       {menuOpen && (
-        <div className={`dropdown-menu ${isHome ? "home" : "other"}`}>
+        <div >
           <ul className="overlay-menu">
             <li>
               <Link className="hamburgerlinks" to="/" onClick={toggleMenu}>

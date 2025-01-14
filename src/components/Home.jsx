@@ -11,6 +11,7 @@ import frontBackgroud from "../img/giu-vicente-unsplash.jpg";
 import frontBackgroud2 from "../img/christin-hume-unsplash.jpg";
 import frontBackgroud3 from "../img/marvin-meyer-unsplash.jpg";
 import "swiper/css";
+import { useRef } from "react";
 
 const slidesContent = [
   {
@@ -24,7 +25,7 @@ const slidesContent = [
   {
     id: 2,
     header: "Miksi teille?",
-    text: "Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Slide 2 content.",
+    text: "Hain teille töihin, koska yrityksenne tarjoaa monia mielenkiintoisia mahdollisuuksia kehittyä ja laajentaa ammattitaitoani. Käytössänne olevat teknologiat ovat myös sellaisia, joiden osaamista haluaisin syventää. Lisäksi arvostan yrityksenne avointa ja välittävää kulttuuria.",
     backgroundImage: frontBackgroud,
     item3BackgroundImage: clouds,
     link: "/about",
@@ -47,6 +48,20 @@ const slidesContent = [
   },
 ];
 const Home = () => {
+  const swiperRef = useRef(null)
+
+  const handleMouseEnter = () => {
+    if(swiperRef.current?.swiper) {
+      swiperRef.current.swiper.autoplay.stop()
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (swiperRef.current?.swiper) {
+      swiperRef.current.swiper.autoplay.start()
+    }
+  };
+
   return (
     <>
       <Swiper
@@ -57,11 +72,14 @@ const Home = () => {
           clickable: true,
         }}
         autoplay={{
-          delay: 3000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, EffectFade]}
         className="mySwiper"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        ref={swiperRef}
       >
         {slidesContent.map((slide) => (
           <SwiperSlide key={slide.id}>

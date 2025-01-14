@@ -46,7 +46,7 @@ const WorkExperience = () => {
           <p className="work-text">
             RND Worksillä työskennellessäni kehitimme tiimin kanssa
             mobiilisovellusta asiakkaallemme iOS- ja Android-laitteille käyttäen
-            React Nativea.
+            React Nativea ja TypeScriptiä.
           </p>
           <div className="worklinks">
             {" "}
